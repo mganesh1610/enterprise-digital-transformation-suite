@@ -1,0 +1,13 @@
+{
+  "legacy_rows_extracted": 80,
+  "cloud_rows_loaded": 80,
+  "conversion_row_parity_pct": 100.0,
+  "legacy_total_debit_usd": 1068112.0,
+  "cloud_total_debit_usd": 1068112.0,
+  "trial_balance_debit_variance_usd": 0.0,
+  "trial_balance_credit_variance_usd": 0.0,
+  "uat_test_cases_executed": 124,
+  "uat_test_cases_passed": 124,
+  "uat_pass_rate_pct": 100.0,
+  "cutover_readiness_decision": "GO_FOR_CUTOVER"
+}
