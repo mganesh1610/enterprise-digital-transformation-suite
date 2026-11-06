@@ -1,0 +1,118 @@
+{
+  "metrics": {
+    "source_rows": 541909,
+    "silver_rows": 541907,
+    "quarantine_rows": 2,
+    "countries": 38,
+    "known_customers": 4372,
+    "unknown_customer_rows": 135078,
+    "duplicate_flagged_rows": 10147,
+    "net_mills": 9769872054,
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00",
+    "checks_passed": 15,
+    "checks_total": 15
+  },
+  "checks": [
+    {
+      "check": "bronze source-row conservation",
+      "observed": 541909,
+      "expected": 541909,
+      "passed": true
+    },
+    {
+      "check": "source identifier uniqueness",
+      "observed": 541909,
+      "expected": 541909,
+      "passed": true
+    },
+    {
+      "check": "silver plus quarantine conservation",
+      "observed": 541909,
+      "expected": 541909,
+      "passed": true
+    },
+    {
+      "check": "negative prices never promoted",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "independent Decimal ledger reconciliation",
+      "observed": 9769872054,
+      "expected": 9769872054,
+      "passed": true
+    },
+    {
+      "check": "monthly-country net reconciliation",
+      "observed": 9769872054,
+      "expected": 9769872054,
+      "passed": true
+    },
+    {
+      "check": "customer plus unknown reconciliation",
+      "observed": 9769872054,
+      "expected": 9769872054,
+      "passed": true
+    },
+    {
+      "check": "country join preserves rows",
+      "observed": 541907,
+      "expected": 541907,
+      "passed": true
+    },
+    {
+      "check": "gross plus credits equals net",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "monthly-country grain uniqueness",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "known customer primary key",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "customer segment assignment complete",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "duplicate flagged rows retained",
+      "observed": 10147,
+      "expected": 10147,
+      "passed": true
+    },
+    {
+      "check": "all three governed question templates execute",
+      "observed": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "check": "repeat build is idempotent",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "provenance": {
+    "source_page": "https://archive.ics.uci.edu/dataset/352/online+retail",
+    "download": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
+    "archive_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+    "workbook": "Online Retail.xlsx",
+    "backup_located_not_executed": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "created_utc": "2026-11-06T04:44:47.950372+00:00",
+    "license": "CC BY 4.0; Daqing Chen (2015), UCI, DOI 10.24432/C5BW33"
+  },
+  "boundary": "Executed locally in SQLite, not Databricks, Unity Catalog, Genie, Tableau or Power BI. No business savings or production adoption measured. Backup overlaps source history and is not independent validation."
+}

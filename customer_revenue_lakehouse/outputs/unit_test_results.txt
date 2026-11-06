@@ -1,0 +1,12 @@
+test_credit_and_duplicates_retained (test_pipeline.RevenueTests.test_credit_and_duplicates_retained) ... ok
+test_fractional_penny_preserved (test_pipeline.RevenueTests.test_fractional_penny_preserved) ... ok
+test_month_boundary_and_repeat_build (test_pipeline.RevenueTests.test_month_boundary_and_repeat_build) ... ok
+test_negative_price_quarantined (test_pipeline.RevenueTests.test_negative_price_quarantined) ... ok
+test_schema_drift_fails_closed (test_pipeline.RevenueTests.test_schema_drift_fails_closed) ... ok
+test_unknown_identity_bucket_preserved (test_pipeline.RevenueTests.test_unknown_identity_bucket_preserved) ... ok
+test_unsupported_sql_not_executed (test_pipeline.RevenueTests.test_unsupported_sql_not_executed) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.019s
+
+OK

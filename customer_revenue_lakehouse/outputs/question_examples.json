@@ -1,0 +1,236 @@
+{
+  "revenue by month": {
+    "sql": "SELECT month,SUM(net_mills)/1000.0 net_gbp FROM gold_monthly_country GROUP BY month ORDER BY month",
+    "rows": [
+      {
+        "month": "2010-12",
+        "net_gbp": 748957.02
+      },
+      {
+        "month": "2011-01",
+        "net_gbp": 560000.26
+      },
+      {
+        "month": "2011-02",
+        "net_gbp": 498062.65
+      },
+      {
+        "month": "2011-03",
+        "net_gbp": 683267.08
+      },
+      {
+        "month": "2011-04",
+        "net_gbp": 493207.121
+      },
+      {
+        "month": "2011-05",
+        "net_gbp": 723333.51
+      },
+      {
+        "month": "2011-06",
+        "net_gbp": 691123.12
+      },
+      {
+        "month": "2011-07",
+        "net_gbp": 681300.111
+      },
+      {
+        "month": "2011-08",
+        "net_gbp": 704804.63
+      },
+      {
+        "month": "2011-09",
+        "net_gbp": 1019687.622
+      },
+      {
+        "month": "2011-10",
+        "net_gbp": 1070704.67
+      },
+      {
+        "month": "2011-11",
+        "net_gbp": 1461756.25
+      },
+      {
+        "month": "2011-12",
+        "net_gbp": 433668.01
+      }
+    ]
+  },
+  "revenue by country": {
+    "sql": "SELECT Country,SUM(net_mills)/1000.0 net_gbp FROM gold_monthly_country GROUP BY Country ORDER BY net_gbp DESC",
+    "rows": [
+      {
+        "Country": "United Kingdom",
+        "net_gbp": 8209930.484
+      },
+      {
+        "Country": "Netherlands",
+        "net_gbp": 284661.54
+      },
+      {
+        "Country": "EIRE",
+        "net_gbp": 263276.82
+      },
+      {
+        "Country": "Germany",
+        "net_gbp": 221698.21
+      },
+      {
+        "Country": "France",
+        "net_gbp": 197403.9
+      },
+      {
+        "Country": "Australia",
+        "net_gbp": 137077.27
+      },
+      {
+        "Country": "Switzerland",
+        "net_gbp": 56385.35
+      },
+      {
+        "Country": "Spain",
+        "net_gbp": 54774.58
+      },
+      {
+        "Country": "Belgium",
+        "net_gbp": 40910.96
+      },
+      {
+        "Country": "Sweden",
+        "net_gbp": 36595.91
+      },
+      {
+        "Country": "Japan",
+        "net_gbp": 35340.62
+      },
+      {
+        "Country": "Norway",
+        "net_gbp": 35163.46
+      },
+      {
+        "Country": "Portugal",
+        "net_gbp": 29367.02
+      },
+      {
+        "Country": "Finland",
+        "net_gbp": 22326.74
+      },
+      {
+        "Country": "Channel Islands",
+        "net_gbp": 20086.29
+      },
+      {
+        "Country": "Denmark",
+        "net_gbp": 18768.14
+      },
+      {
+        "Country": "Italy",
+        "net_gbp": 16890.51
+      },
+      {
+        "Country": "Cyprus",
+        "net_gbp": 12946.29
+      },
+      {
+        "Country": "Austria",
+        "net_gbp": 10154.32
+      },
+      {
+        "Country": "Hong Kong",
+        "net_gbp": 10117.04
+      },
+      {
+        "Country": "Singapore",
+        "net_gbp": 9120.39
+      },
+      {
+        "Country": "Israel",
+        "net_gbp": 7907.82
+      },
+      {
+        "Country": "Poland",
+        "net_gbp": 7213.14
+      },
+      {
+        "Country": "Unspecified",
+        "net_gbp": 4749.79
+      },
+      {
+        "Country": "Greece",
+        "net_gbp": 4710.52
+      },
+      {
+        "Country": "Iceland",
+        "net_gbp": 4310.0
+      },
+      {
+        "Country": "Canada",
+        "net_gbp": 3666.38
+      },
+      {
+        "Country": "Malta",
+        "net_gbp": 2505.47
+      },
+      {
+        "Country": "United Arab Emirates",
+        "net_gbp": 1902.28
+      },
+      {
+        "Country": "USA",
+        "net_gbp": 1730.92
+      },
+      {
+        "Country": "Lebanon",
+        "net_gbp": 1693.88
+      },
+      {
+        "Country": "Lithuania",
+        "net_gbp": 1661.06
+      },
+      {
+        "Country": "European Community",
+        "net_gbp": 1291.75
+      },
+      {
+        "Country": "Brazil",
+        "net_gbp": 1143.6
+      },
+      {
+        "Country": "RSA",
+        "net_gbp": 1002.31
+      },
+      {
+        "Country": "Czech Republic",
+        "net_gbp": 707.72
+      },
+      {
+        "Country": "Bahrain",
+        "net_gbp": 548.4
+      },
+      {
+        "Country": "Saudi Arabia",
+        "net_gbp": 131.17
+      }
+    ]
+  },
+  "revenue by customer segment": {
+    "sql": "SELECT segment,customer_count,net_mills/1000.0 net_gbp FROM gold_segment_revenue ORDER BY net_gbp DESC",
+    "rows": [
+      {
+        "segment": "Top quartile",
+        "customer_count": 1093.0,
+        "net_gbp": 6520014.571
+      },
+      {
+        "segment": "Other known",
+        "customer_count": 3279.0,
+        "net_gbp": 1780051.243
+      },
+      {
+        "segment": "Unknown identity",
+        "customer_count": NaN,
+        "net_gbp": 1469806.24
+      }
+    ]
+  }
+}

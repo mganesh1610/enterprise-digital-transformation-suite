@@ -1,0 +1,6 @@
+asset,layer,grain,upstream,owner,refresh,access,classification
+bronze_invoice_lines,bronze,source workbook row,UCI archive SHA-256,portfolio maintainer,on demand; static 2010-2011 source,local reference; no enterprise RBAC enforcement,public pseudonymous transactions
+silver_invoice_lines,silver,validated source row,bronze_invoice_lines,portfolio maintainer,on demand; static 2010-2011 source,local reference; no enterprise RBAC enforcement,public pseudonymous transactions
+gold_monthly_country,gold,month x country,silver_invoice_lines + dim_country,portfolio maintainer,on demand; static 2010-2011 source,local reference; no enterprise RBAC enforcement,public pseudonymous transactions
+gold_customer_metrics,gold,known customer,silver_invoice_lines,portfolio maintainer,on demand; static 2010-2011 source,local reference; no enterprise RBAC enforcement,public pseudonymous transactions
+gold_segment_revenue,gold,customer segment including unknown bucket,gold_customer_metrics + silver_invoice_lines,portfolio maintainer,on demand; static 2010-2011 source,local reference; no enterprise RBAC enforcement,public pseudonymous transactions

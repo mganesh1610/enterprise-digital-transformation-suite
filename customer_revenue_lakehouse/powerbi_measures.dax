@@ -1,0 +1,10 @@
+// Unexecuted Power BI handoff measures for gold_monthly_country.csv.
+// Import column types: month/Country text; all counts and mills whole numbers.
+// Distinct customer counts cannot be added across months or countries.
+Net Value GBP = DIVIDE(SUM(gold_monthly_country[net_mills]), 1000)
+Gross Value GBP = DIVIDE(SUM(gold_monthly_country[gross_mills]), 1000)
+Credits GBP = DIVIDE(SUM(gold_monthly_country[credit_mills]), 1000)
+Invoice Lines = SUM(gold_monthly_country[line_count])
+Unknown Identity Lines = SUM(gold_monthly_country[unknown_customer_lines])
+Unknown Identity Share = DIVIDE([Unknown Identity Lines], [Invoice Lines])
+Signed Value Check = [Gross Value GBP] + [Credits GBP] - [Net Value GBP]

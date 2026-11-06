@@ -1,0 +1,4 @@
+data/
+__pycache__/
+outputs/*.sqlite
+outputs/normalized_invoice_lines.csv
