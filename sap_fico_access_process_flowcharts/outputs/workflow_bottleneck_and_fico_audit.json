@@ -1,0 +1,8 @@
+{
+  "source_event_snapshots": 141712,
+  "consolidated_unique_workflows": 24918,
+  "reporting_row_consolidation_pct": 82.42,
+  "top_audited_categories": 12,
+  "access_and_sql_integrity_checks": "8/8 (100.0%)",
+  "zip_sha256": "6294e29a311647306bfdfc85783f7df66517c197b9cd49aa5ee36ba9c525d1d6"
+}

@@ -1,0 +1,13 @@
+category,unique_workflows,avg_reassignments,bottleneck_workflows,sla_compliance_pct
+Category 42,3558,0.66,518,80.64
+Category 26,3338,0.96,674,69.53
+Category 53,2678,0.98,627,62.32
+Category 46,2432,0.88,514,48.44
+Category 32,1522,0.73,253,75.23
+Category 9,1155,0.62,174,59.22
+Category 37,1144,0.91,225,66.35
+Category 23,1063,1.75,389,52.49
+Category 20,1047,0.86,223,76.98
+Category 57,971,1.4,297,59.84
+Category 61,810,1.17,198,47.04
+Category 24,640,0.91,134,52.66
