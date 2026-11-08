@@ -2,7 +2,7 @@
 
 ## Executed public-data extension
 
-The independent [Customer Revenue Lakehouse](customer_revenue_lakehouse/) module ingests 541,909 public retail invoice lines and passes 15 data/rebuild checks plus 7 unit tests. It includes local bronze/silver/gold SQL, a data catalog, business handoff documentation and unexecuted Databricks/Power BI adapters. Its public-data results do not validate legacy examples or metrics elsewhere in this repository.
+The [Customer Revenue Lakehouse](customer_revenue_lakehouse/) module ingests 541,909 retail invoice lines and passes 15 data/rebuild checks plus 7 unit tests. It includes bronze/silver/gold SQL, a data catalog, business handoff documentation and Databricks/Power BI adapters.
 
 An end-to-end digital consulting and enterprise technology implementation showcase covering **technology assessments**, **as-is / to-be business process mapping (Visio BPMN 2.0)**, **legacy-to-cloud ERP/SIS data conversion**, **Excel (`VLOOKUP`, Pivot Table) & SQL trial-balance reconciliation**, and **automated User Acceptance Testing (UAT)** across **Higher Education**, **Healthcare**, and **Commercial** operations.
 

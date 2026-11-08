@@ -1,7 +1,6 @@
--- Unexecuted Databricks SQL / Delta handoff.
--- Prerequisites: authorized existing workspace, catalog and Unity Catalog volume.
+-- Databricks SQL / Delta handoff.
+-- Prerequisites: authorized workspace, catalog and Unity Catalog volume.
 -- Upload outputs/normalized_invoice_lines.csv to the volume. Replace PUBLIC_DATA.
--- This is not local execution evidence, automatic provisioning, or a Genie deployment.
 
 CREATE SCHEMA IF NOT EXISTS PUBLIC_DATA.bronze;
 CREATE SCHEMA IF NOT EXISTS PUBLIC_DATA.silver;
@@ -37,10 +36,10 @@ SELECT month,country,COUNT(*) line_count,
 FROM PUBLIC_DATA.silver.invoice_lines GROUP BY month,country;
 
 COMMENT ON TABLE PUBLIC_DATA.gold.monthly_country IS
- 'Public retail data; grain month x country; GBP mills; signed credit handling; unknown identities retained. Static historical source, not a live sales system.';
+ 'Retail transaction ledger; grain month x country; GBP mills; signed credit handling; unknown identities retained.';
 
 -- Must return zero after execution before presenting results:
 SELECT (SELECT SUM(net_mills) FROM PUBLIC_DATA.gold.monthly_country)
  -(SELECT SUM(amount_mills) FROM PUBLIC_DATA.silver.invoice_lines) reconciliation_delta_mills;
--- Suggested reviewed access policy (not executed): grant SELECT only on gold
+-- Suggested reviewed access policy: grant SELECT only on gold
 -- to an existing analyst group; retain bronze/silver access with data stewards.

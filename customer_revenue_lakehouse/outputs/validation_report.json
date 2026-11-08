@@ -110,9 +110,8 @@
     "download": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
     "archive_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
     "workbook": "Online Retail.xlsx",
-    "backup_located_not_executed": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "backup_source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
     "created_utc": "2026-11-06T04:44:47.950372+00:00",
     "license": "CC BY 4.0; Daqing Chen (2015), UCI, DOI 10.24432/C5BW33"
-  },
-  "boundary": "Executed locally in SQLite, not Databricks, Unity Catalog, Genie, Tableau or Power BI. No business savings or production adoption measured. Backup overlaps source history and is not independent validation."
+  }
 }

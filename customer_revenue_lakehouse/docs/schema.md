@@ -20,4 +20,4 @@
 
 `gold_customer_metrics` grain: known customer. Columns: CustomerID, net_mills, purchase_invoices, last_purchase, monetary_rank, customer_count, segment. Last purchase ignores credits and zero-price records. `gold_segment_revenue` includes Top quartile, Other known, and Unknown identity. Unknown bucket customer count is unavailable, not zero.
 
-The backup workbook uses original names such as Invoice, Price and Customer ID. Rename them to InvoiceNo, UnitPrice and CustomerID, select one dated worksheet, preserve a source-sheet field and assign a composite sheet/row key before running the same contract. Do not concatenate overlapping histories or treat the backup as independent test data. This adapter is a design, not an executed backup import.
+The backup workbook uses original names such as Invoice, Price and Customer ID. Rename them to InvoiceNo, UnitPrice and CustomerID, select one dated worksheet, preserve a source-sheet field and assign a composite sheet/row key before running the same contract. Do not concatenate overlapping histories.

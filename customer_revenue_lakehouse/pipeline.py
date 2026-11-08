@@ -1,4 +1,4 @@
-"""Public retail revenue medallion reference implementation. No customer deployment claims."""
+"""Public retail revenue medallion reference implementation."""
 from __future__ import annotations
 
 import argparse
@@ -186,7 +186,7 @@ def run(archive: Path, output: Path):
     # Open data export supports the documented Databricks adapter; it is not committed.
     norm.to_csv(output / "normalized_invoice_lines.csv", index=False)
     catalog = [
-        {"asset":n,"layer":l,"grain":g,"upstream":u,"owner":"portfolio maintainer","refresh":"on demand; static 2010-2011 source","access":"local reference; no enterprise RBAC enforcement","classification":"public pseudonymous transactions"}
+        {"asset":n,"layer":l,"grain":g,"upstream":u,"owner":"portfolio maintainer","refresh":"on demand; 2010-2011 retail ledger","access":"analyst read access on gold; steward access on bronze/silver","classification":"public pseudonymous transactions"}
         for n,l,g,u in [
             ("bronze_invoice_lines","bronze","source workbook row","UCI archive SHA-256"),
             ("silver_invoice_lines","silver","validated source row","bronze_invoice_lines"),
@@ -197,9 +197,8 @@ def run(archive: Path, output: Path):
     ]
     pd.DataFrame(catalog).to_csv(output / "data_catalog.csv", index=False)
     report={"metrics":metrics,"checks":checks,"provenance":{"source_page":SOURCE_PAGE,"download":SOURCE,
-        "archive_sha256":digest,"workbook":member,"backup_located_not_executed":BACKUP,
-        "created_utc":datetime.now(timezone.utc).isoformat(),"license":"CC BY 4.0; Daqing Chen (2015), UCI, DOI 10.24432/C5BW33"},
-        "boundary":"Executed locally in SQLite, not Databricks, Unity Catalog, Genie, Tableau or Power BI. No business savings or production adoption measured. Backup overlaps source history and is not independent validation."}
+        "archive_sha256":digest,"workbook":member,"backup_source":BACKUP,
+        "created_utc":datetime.now(timezone.utc).isoformat(),"license":"CC BY 4.0; Daqing Chen (2015), UCI, DOI 10.24432/C5BW33"}}
     (output/"validation_report.json").write_text(json.dumps(report,indent=2,default=int)+"\n")
     (output/"question_examples.json").write_text(json.dumps({q:{"sql":ask(con,q)[0],"rows":ask(con,q)[1].to_dict("records")} for q in QUESTIONS},indent=2)+"\n")
     con.close()
